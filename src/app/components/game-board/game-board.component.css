@@ -1,0 +1,16 @@
+.board{
+    margin-top: 10% !important;
+}
+
+.campos{
+    height: 200%;
+    border: 5px solid black;
+}
+
+.col-2{
+    height: 100px !important;
+}
+
+.row{
+    margin-bottom: 0 !important;
+}

@@ -1,0 +1,27 @@
+<nav class="breadcrumb">
+    <div class="row">
+        <div class="row col-4">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h3 class="float-left">{{sec | timer}}</h3>
+            </div>
+        </div>
+        <div class="row col-6">
+            <div class="col-6">
+                <span class="float-right">
+                    <h3>Turno</h3>
+                </span>
+            </div>
+            <div class="col-6 float-right">
+                <span class="float-left">
+                    <h3>{{turn}}</h3>
+                </span>
+            </div>
+        </div>
+        <div class="col-2 float-right">
+            <span class="float-right">
+                <h3>{{(playerTurn) ? playerTurn.name : ''}}</h3>
+            </span>
+        </div>
+    </div>
+</nav>

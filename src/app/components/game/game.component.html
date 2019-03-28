@@ -1,0 +1,24 @@
+<div class="back">
+    <game-infos [turn]="turn" [playerTurn]="playerTurn" [sec]="sec"></game-infos>
+    <game-board [playerBoard]="playerTurn" (point)="attPlayer($event)"></game-board>
+
+    <ng-template #template id="template">
+        <div class="modal-header">
+            <p  class="modal-title pull-left" 
+                [ngClass]="(playerTurn == j1) ? 'j1w' : (playerTurn == j2) ? 'j2w' : 'velha'">
+                {{finalMessage}}
+            </p>
+        </div>
+        <div class="modal-body">
+            Tempo de jogo {{sec | timer}}
+        </div>
+        <div class="modal-footer pull-left">
+            <button type="button" class="btn btn-info pull-right" (click)="reload();modalRef.hide()">
+                Novo Jogo
+            </button>
+            <button type="button" class="btn btn-danger pull-right" (click)="modalRef.hide()" routerLink="/">
+                Inicio
+            </button>
+        </div>
+    </ng-template>
+</div>

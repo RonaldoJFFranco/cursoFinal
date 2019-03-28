@@ -1,0 +1,20 @@
+<h1>Vencedores!!</h1>
+<div *ngIf="winners && winners.length > 0 else vazio" class="col-12 row container">
+  <div class="col-6">
+    <ul class="list-group">
+      <li *ngFor="let winner of winners" class="list-group-item ">
+        <div class="col-6">
+          <span class="title">Jogador:</span> {{winner.name}}
+        </div>
+        <div class="col-6">
+          <span class="title">Tempo:</span> {{winner.time | timer}}
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-6 bg-image"></div>
+</div>
+
+<ng-template #vazio>
+  <h4>Ainda não há vencedores</h4>
+</ng-template>

@@ -1,0 +1,26 @@
+
+.back {
+  z-index: 2;
+  opacity: 0.8;
+    background: url('../../../assets/img/backgroundg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: -webkit-fill-available;
+  }
+  game-infos,game-board{
+    opacity: 1 !important;
+  }
+
+.j1w{
+  color : blue;
+}
+
+.j2w{
+  color : red;
+}
+
+.velha{
+  color : black;
+}
+.j1w,.j2w,.velha{
+  font-size: 28px;
+}

@@ -1,0 +1,34 @@
+
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4">Jogo da Velha!</h3>
+              <div class="form-label-group">
+                <input type="text" id="name1" class="form-control" placeholder="Jogador 1" type="text"
+                  [(ngModel)]="j1" required autofocus>
+                <label for="name1">Jogador 1</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="name2" class="form-control" placeholder="Jogador 2" type="text"
+                  [(ngModel)]="j2" required autofocus>
+                <label for="name2">Jogador 2</label>
+              </div>
+
+              <a class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+                routerLink="/game" [queryParams]="{player1:j1,player2:j2}" type="submit">jogar</a>
+                
+              <a class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
+              routerLink="/winners" type="submit">Ganhadores</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
