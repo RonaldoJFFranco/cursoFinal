@@ -77,8 +77,7 @@ export class GameComponent implements OnInit {
     if (this.finish){
       this.finalMessage = `${this.playerTurn.name} Venceu !!`;
       clearInterval(this.interval);
-      const request = this.winners.addWinner(this.playerTurn, this.sec).subscribe();
-      setTimeout(() => request.unsubscribe(), 2000);
+      this.winners.addWinner(this.playerTurn, this.sec).subscribe();
       this.openModal(this.myModal);
     }
     else if(this.turn == 9){
